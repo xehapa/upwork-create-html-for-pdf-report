@@ -1,0 +1,114 @@
+header {
+    height: 38px;
+    background-color: var(--headerBg);
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-family: var(--secondaryFont);
+    font-size: var(--secondaryHeading);
+    color: #FFFFFF;
+}
+
+section {
+    padding: 0 40px;
+}
+
+.infographic {
+    height: 340px;
+    margin-bottom: 20px;
+    position: relative
+}
+
+#verticalLine {
+    width: 2px;
+    height: 286px;
+    left: 340px;
+    top: 0;
+    background: var(--blue);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+#verticalLine::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--blue);
+    border-radius: 100%;
+    margin-left: -4px;
+}
+
+.frame {
+    border: 2px solid var(--blue);
+    width: 142px;
+    height: 60px;
+    left: 377px;
+    font-weight: 700;
+}
+
+.frame p {
+    font-family: var(--fontRoboto);
+}
+
+.connector-line::before {
+    content: '';
+    height: 2px;
+    background-color: var(--blue);
+    position: absolute;
+    margin-top: 28px;
+    width: 37px;
+    left: -37px;
+}
+
+#frame278 {
+    width: 136px;
+    height: 60px;
+    left: 76px;
+    top: 12px;
+}
+
+#frame278::before {
+    width: 130px;
+    right: -130px;
+    left: 100%;
+    margin-top: 28px;
+}
+
+#frame279 {
+    width: 170px;
+    height: 74px;
+    left: 76px;
+    bottom: 18px;
+}
+
+#frame279::before {
+    width: 98px;
+    right: -98px;
+    left: 100%;
+    margin-top: 35px;
+}
+
+#frame280 {
+    top: 12px;
+}
+
+#frame281 {
+    top: 80px;
+}
+
+#frame282 {
+    top: 148px;
+}
+
+#frame283 {
+    top: 215px;
+}
+
+.infotext p {
+    margin-bottom: 28px;
+}
+
+.infotext p:last-child {
+    margin-bottom: 0;
+}

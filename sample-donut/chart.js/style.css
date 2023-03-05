@@ -26,6 +26,8 @@ body {
     width: 420px;
     height: 420px;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 #innerText {
@@ -73,6 +75,7 @@ body {
 
 .legend a {
     color: var(--legend-link-color);
+    text-decoration: none;
 }
 
 .legend a:hover {

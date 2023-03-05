@@ -1,0 +1,28 @@
+header {
+    height: 100px;
+    margin-bottom: 21px;
+}
+
+.accounts .account {
+    width: 242px;
+    height: 61px;
+    border: 1px solid var(--lightGrey);
+    border-radius: var(--radius10);
+    display: grid;
+    padding: 10px;
+}
+
+.accounts .account img {
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.accounts .account .name {
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+.accounts .account p:not(.name) {
+    margin-bottom: 3px;
+}

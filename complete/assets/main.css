@@ -1,0 +1,122 @@
+@font-face {
+    font-family: SF-Pro-Text;
+    src: url('../assets/sf-pro/SF-Pro-Text-Regular.otf') format('opentype'),
+        url('../assets/sf-pro/SF-Pro-Text-Bold.otf') format('opentype')
+}
+
+:root {
+    /* Global */
+    --mainFont: Arial, Helvetica, sans-serif;
+    --secondaryFont: SF-Pro-Text;
+    --fontRoboto: Roboto, sans-serif;
+    --mainHeading: 23px;
+    --secondaryHeading: 20px;
+    --textRegular: 12px;
+    --textSmall: 10px;
+    --extraSmall: 9px;
+    --radius10: 10px;
+    --currencySize: 18px;
+    --currencyMedium: var(--secondaryHeading);
+    --currencyBig: 22px;
+    /* Color */
+    --black: #000000;
+    --borderBlack: 1px solid rgba(0, 0, 0, .1);
+    --blue: #007296;
+    --lightGrey: #E5E5EA;
+    --textDanger: #F2574A;
+    --textGrey: #8D8D8E;
+    --textOrange: #F59300;
+    --textGreen: #31CE5D;
+    --headerBg: #00ABE1;
+}
+
+body {
+    font-family: var(--mainFont);
+    color: var(--black);
+}
+
+p {
+    line-height: normal;
+}
+
+.content-area {
+    height: 838px;
+    max-width: 595px;
+    border: var(--borderBlack);
+    margin-top: 25px;
+}
+
+section {
+    padding: 0 40px;
+}
+
+.heading {
+    font-weight: 700;
+    color: var(--blue);
+}
+
+.heading.main {
+    font-size: var(--mainHeading);
+    text-align: center;
+    width: 183px;
+    margin-bottom: 25px;
+}
+
+.heading.secondary {
+    font-size: var(--secondaryHeading);
+}
+
+.regular-text {
+    font-size: var(--textRegular);
+}
+
+.small-text {
+    font-size: var(--textSmall);
+}
+
+.extra-small-text {
+    font-size: var(--extraSmall);
+}
+
+.color-red {
+    color: var(--textDanger);
+    font-weight: 700;
+}
+
+.color-grey {
+    color: var(--textGrey);
+}
+
+.color-orange {
+    color: var(--textOrange);
+}
+
+.color-green {
+    color: var(--textGreen);
+}
+
+.color-blue {
+    color: var(--blue);
+}
+
+.align-justify {
+    text-align: justify;
+}
+
+.rounded-corner {
+    border-radius: var(--radius10);
+}
+
+.currency {
+    font-family: var(--fontRoboto);
+    font-size: var(--currencySize);
+    font-weight: 700;
+}
+
+.currency.medium {
+    font-size: var(--currencyMedium);
+}
+
+.currency.big {
+    font-size: var(--currencyBig);
+}
