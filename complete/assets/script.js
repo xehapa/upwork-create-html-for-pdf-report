@@ -145,7 +145,8 @@ if (cp4) {
         },
         options: {
             scales: false,
-            cutout: '66%'
+            cutout: '66%',
+            animations: false
         }
     });
 }
@@ -177,7 +178,8 @@ if (cp5) {
         },
         options: {
             scales: false,
-            cutout: '66%'
+            cutout: '66%',
+            animations: false
         }
     });
 }

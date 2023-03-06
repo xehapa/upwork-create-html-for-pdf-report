@@ -1,25 +1,30 @@
 const { chromium } = require('playwright')
-const fs = require('fs')
+
+const baseUrl = 'http://localhost:5500/complete'
 
 ;(async () => {
   const browser = await chromium.launch()
     const context = await browser.newContext()
     const page = await context.newPage()
-    const urls = [
-      'http://localhost:5500/complete/page-1.html',
-      'http://localhost:5500/complete/page-2.html',
-      'http://localhost:5500/complete/page-3.html',
-      'http://localhost:5500/complete/page-4.html',
-      'http://localhost:5500/complete/page-5.html',
-      'http://localhost:5500/complete/page-6.html'
+    const paths = [
+      'page-1.html',
+      'page-2.html',
+      'page-3.html',
+      'page-4.html',
+      'page-5.html',
+      'page-6.html'
     ]
     
-    for (const url of urls) {
-      await page.goto(url);
-      await page.waitForTimeout(5000)
-      await page.pdf({path: `file/${Date.now()}.pdf`, printBackground: true})
+    let i = 0
+    
+    for (const path of paths) {
+      ++i
+      await page.goto(`${baseUrl}/${path}`);
+      await page.waitForTimeout(300)
+      await page.pdf({path: `../output/page-${i}.pdf`, printBackground: true})
+      console.log(`Generate PDF number ${i}`)
     }
+    
+    await page.close()
     await browser.close()
-    const f = fs.read('file', {encoding: 'utf-8'}).toString()
-    console.log(f)
 })()
