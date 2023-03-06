@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/main.css">
+    <title>PDF - Page 4</title>
+</head>
+
+<body>
+    <div class="container gx-0 content-area page-4">
+        <header class="d-flex justify-content-center align-items-center">
+            <h1 class="fw-bold mb-0">StockClubs - FAANG Investing Community</h1>
+        </header>
+        <section>
+            <h2 class="heading secondary">Asset Allocation Between Accounts</h2>
+            <p class="regular-text m-0 align-justify">
+                This is how your assets are distributed across different accounts:
+            </p>
+        </section>
+        <section class="d-flex justify-content-center">
+            <div id="chartPlaceholder" class="col-6">
+                <canvas id="page4Chart"></canvas>
+                <div id="innerText" class="d-flex justify-content-center align-items-center text-center">
+                    <p class="m-0">5<br />Accounts</p>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center align-items-center legend">
+                <ul>
+                    <li>
+                        <span class="bullet bg-red"></span>
+                        <a href="#">Vanguard - Traditional IRA Account</a>
+                    </li>
+                    <li>
+                        <span class="bullet bg-orange"></span>
+                        <a href="#">Interactive Brokers - Brokerage Account</a>
+                    </li>
+                    <li>
+                        <span class="bullet bg-green"></span>
+                        <a href="#">Fidelity - Tradational IRA Account</a>
+                    </li>
+                    <li>
+                        <span class="bullet bg-sky-blue"></span>
+                        <a href="#">Fidelity - 401K Account</a>
+                    </li>
+                    <li>
+                        <span class="bullet bg-purple"></span>
+                        <a href="#">Robinhood - Brokerage Account</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="accounts d-flex">
+            <div>
+                <div class="d-flex align-items-center account">
+                    <img src="assets/images/vanguard.svg" alt="vanguard">
+                    <div class="d-flex flex-wrap">
+                        <p class="d-block w-100 fw-bold regular-text name">Vanguard</p>
+                        <p class="d-block mb-0 small-text color-grey">
+                            Traditional IRA Account
+                        </p>
+                    </div>
+                    <div class="flex-fill d-flex justify-content-between">
+                        <span class="currency regular-text color-blue fw-normal">50.05%</span>
+                        <span class="currency regular-text color-blue fw-normal">$125,432.23</span>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center account">
+                    <img src="assets/images/interactive-brokers.svg" alt="interactive brokers">
+                    <div class="d-flex flex-wrap">
+                        <p class="d-block w-100 fw-bold regular-text name">Interactive Brokers</p>
+                        <p class="d-block mb-0 small-text color-grey">
+                            Brokerage Account
+                        </p>
+                    </div>
+                    <div class="flex-fill d-flex justify-content-between">
+                        <span class="currency regular-text color-blue fw-normal">12.05%</span>
+                        <span class="currency regular-text color-blue fw-normal">$32,432.23</span>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center account">
+                    <img src="assets/images/fidelity.svg" alt="fidelity">
+                    <div class="d-flex flex-wrap">
+                        <p class="d-block w-100 fw-bold regular-text name">Fidelity</p>
+                        <p class="d-block mb-0 small-text color-grey">
+                            Traditional IRA Account
+                        </p>
+                    </div>
+                    <div class="flex-fill d-flex justify-content-between align-items-center">
+                        <span class="currency regular-text color-blue fw-normal">12.05%</span>
+                        <span class="currency regular-text color-blue fw-normal">$32,432.23</span>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center account">
+                    <img src="assets/images/fidelity.svg" alt="fidelity">
+                    <div class="d-flex flex-wrap">
+                        <p class="d-block w-100 fw-bold regular-text name">Fidelity</p>
+                        <p class="d-block mb-0 small-text color-grey">
+                            401K Account
+                        </p>
+                    </div>
+                    <div class="flex-fill d-flex justify-content-between">
+                        <span class="currency regular-text color-blue fw-normal">12.05%</span>
+                        <span class="currency regular-text color-blue fw-normal">$32,432.23</span>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center account">
+                    <img src="assets/images/robinhood.svg" alt="robinhood">
+                    <div class="d-flex flex-wrap">
+                        <p class="d-block w-100 fw-bold regular-text name">Robinhood</p>
+                        <p class="d-block mb-0 small-text color-grey">
+                            Brokerage Account
+                        </p>
+                    </div>
+                    <div class="flex-fill d-flex justify-content-between">
+                        <span class="currency regular-text color-blue fw-normal">12.05%</span>
+                        <span class="currency regular-text color-blue fw-normal">$32,432.23</span>
+                    </div>
+                </div>
+            </div>
+            <div id="tips">
+                <h3 class="heading">Pro Tip</h3>
+                <p class="small-text">Think whether you are fully leveraging your tax advantaged accounts. You can put
+                    up to $43,500 a year
+                    into your ROTH IRA account through 401k mega backdoor conversion if you have access to a 401k plan
+                    and $6,500 a year through backdoor conversion.</p>
+                <p class="small-text">Read more here about mega and regular backdoor conversions and learn how to grow
+                    your wealth tax free!</p>
+            </div>
+        </section>
+        <section>
+            <p class="regular-text">Each brokerage account in the United States is typically insured by the Securities
+                Investor Protection
+                Corporation (SIPC). SIPC is a non-profit organization that was created by Congress to protect investors
+                in case a brokerage firm fails.</p>
+            <p class="regular-text">SIPC insurance typically covers up to $500,000 in securities and cash, with a
+                $250,000
+                limit on cash.
+                This means that if a brokerage firm fails, SIPC will work to return the securities and cash in your
+                account up to the limits of their coverage.</p>
+            <p class="regular-text">It's important to note that SIPC insurance does not protect against market losses or
+                fraud. It also doesn't cover certain types of investments, such as commodities and futures contracts.
+                Additionally, SIPC insurance may not cover all types of accounts, such as certain types of retirement
+                accounts. <span class="fw-bold">Therefore, it's important to understand the limits and exclusions of
+                    SIPC insurance and to consider diversifying your investments across multiple brokerage firms to
+                    further mitigate risk.</span>
+            </p>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>

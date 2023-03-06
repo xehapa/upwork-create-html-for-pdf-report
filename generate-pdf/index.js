@@ -1,4 +1,5 @@
 const { chromium } = require('playwright')
+const fs = require('fs')
 
 ;(async () => {
   const browser = await chromium.launch()
@@ -16,7 +17,9 @@ const { chromium } = require('playwright')
     for (const url of urls) {
       await page.goto(url);
       await page.waitForTimeout(5000)
-      await page.pdf({path: `${new Date().toISOString()}.pdf`, printBackground: true})
+      await page.pdf({path: `file/${Date.now()}.pdf`, printBackground: true})
     }
     await browser.close()
+    const f = fs.read('file', {encoding: 'utf-8'}).toString()
+    console.log(f)
 })()

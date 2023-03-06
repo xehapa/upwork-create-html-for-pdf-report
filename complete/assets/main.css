@@ -18,21 +18,56 @@
     --currencySize: 18px;
     --currencyMedium: var(--secondaryHeading);
     --currencyBig: 22px;
+    --doughnutInnerText: 15px;
     /* Color */
     --black: #000000;
     --borderBlack: 1px solid rgba(0, 0, 0, .1);
     --blue: #007296;
+    --pinBlue: #719BD2;
+    --pinRed: #B15928;
     --lightGrey: #E5E5EA;
+    --lime: #A4E044;
+    --eggplant: #9F73C2;
+    --bloodRed: #C02033;
     --textDanger: #F2574A;
     --textGrey: #8D8D8E;
     --textOrange: #F59300;
     --textGreen: #31CE5D;
     --headerBg: #00ABE1;
+    --tableBg: rgba(0, 171, 225, 0.1);
+    --tableBorder: #828282;
+    --chartRed: #F2574A;
+    --chartOrange: #FBBC12;
+    --chartGreen: #31CE5D;
+    --chartBlue: #3994E9;
+    --chartPurple: #C53C84;
+    --legendLink: var(--blue)
 }
 
 body {
     font-family: var(--mainFont);
     color: var(--black);
+}
+
+section {
+    padding: 0 40px;
+    margin-bottom: 28px;
+}
+
+.page-4 section {
+    padding-right: 26px;
+}
+
+.page-5 section {
+    padding-right: 16px;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+section p a {
+    text-decoration: none;
 }
 
 p {
@@ -46,8 +81,9 @@ p {
     margin-top: 25px;
 }
 
-section {
-    padding: 0 40px;
+.content-area.page-5 {
+    height: max-content;
+    padding-bottom: 20px;
 }
 
 .heading {
@@ -64,6 +100,75 @@ section {
 
 .heading.secondary {
     font-size: var(--secondaryHeading);
+}
+
+.page-1 header {
+    height: 100px;
+    margin-bottom: 21px;
+    background: url('images/page-1-header-bg.png');
+    background-size: cover;
+}
+
+.page-2 header,
+.page-3 header,
+.page-4 header,
+.page-5 header,
+.page-6 header {
+    height: 38px;
+    background-color: var(--headerBg);
+    margin-bottom: 25px;
+}
+
+.page-2 header h1,
+.page-3 header h1,
+.page-4 header h1,
+.page-5 header h1,
+.page-6 header h1 {
+    font-family: var(--secondaryFont);
+    font-size: var(--secondaryHeading);
+    color: #FFFFFF;
+}
+
+.accounts .account {
+    width: 242px;
+    height: 61px;
+    border: 1px solid var(--lightGrey);
+    border-radius: var(--radius10);
+    display: grid;
+    padding: 10px;
+}
+
+.accounts .account img {
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.accounts .account .name {
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+.accounts .account p:not(.name) {
+    margin-bottom: 3px;
+}
+
+.rounded-corner {
+    border-radius: var(--radius10);
+}
+
+.currency {
+    font-family: var(--fontRoboto);
+    font-size: var(--currencySize);
+    font-weight: 700;
+}
+
+.currency.medium {
+    font-size: var(--currencyMedium);
+}
+
+.currency.big {
+    font-size: var(--currencyBig);
 }
 
 .regular-text {
@@ -99,24 +204,405 @@ section {
     color: var(--blue);
 }
 
+.bg-red {
+    background-color: var(--chartRed);
+}
+
+.bg-orange {
+    background-color: var(--textOrange);
+}
+
+.bg-green {
+    background-color: var(--chartGreen);
+}
+
+.bg-sky-blue {
+    background-color: var(--chartBlue);
+}
+
+.bg-blue {
+    background-color: var(--headerBg);
+}
+
+.bg-purple {
+    background-color: var(--chartPurple);
+}
+
+.bg-lime {
+    background-color: var(--lime);
+}
+
+.bg-bloodRed {
+    background-color: var(--bloodRed);
+}
+
+.bg-eggPlant {
+    background-color: var(--eggplant);
+}
+
+.bg-yellow {
+    background-color: var(--chartOrange);
+}
+
 .align-justify {
     text-align: justify;
 }
 
-.rounded-corner {
-    border-radius: var(--radius10);
+/* PAGE 2 */
+.infographic {
+    height: 340px;
+    margin-bottom: 20px;
+    position: relative
 }
 
-.currency {
-    font-family: var(--fontRoboto);
-    font-size: var(--currencySize);
+#verticalLine {
+    width: 2px;
+    height: 286px;
+    left: 340px;
+    top: 0;
+    background: var(--blue);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+#verticalLine::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--blue);
+    border-radius: 100%;
+    margin-left: -4px;
+}
+
+.frame {
+    border: 2px solid var(--blue);
+    width: 142px;
+    height: 60px;
+    left: 377px;
     font-weight: 700;
 }
 
-.currency.medium {
-    font-size: var(--currencyMedium);
+.frame p {
+    font-family: var(--fontRoboto);
 }
 
-.currency.big {
-    font-size: var(--currencyBig);
+.connector-line::before {
+    content: '';
+    height: 2px;
+    background-color: var(--blue);
+    position: absolute;
+    margin-top: 28px;
+    width: 37px;
+    left: -37px;
+}
+
+#frame278 {
+    width: 136px;
+    height: 60px;
+    left: 76px;
+    top: 12px;
+}
+
+#frame278::before {
+    width: 130px;
+    right: -130px;
+    left: 100%;
+    margin-top: 28px;
+}
+
+#frame279 {
+    width: 170px;
+    height: 74px;
+    left: 76px;
+    bottom: 18px;
+}
+
+#frame279::before {
+    width: 98px;
+    right: -98px;
+    left: 100%;
+    margin-top: 35px;
+}
+
+#frame280 {
+    top: 12px;
+}
+
+#frame281 {
+    top: 80px;
+}
+
+#frame282 {
+    top: 148px;
+}
+
+#frame283 {
+    top: 215px;
+}
+
+.infotext p {
+    margin-bottom: 28px;
+}
+
+.infotext p:last-child {
+    margin-bottom: 0;
+}
+
+/* PAGE 3 */
+.table-responsive {
+    border-radius: 4px;
+    border: 1px solid var(--tableBorder);
+}
+
+.table {
+    width: 404px;
+    margin-bottom: 0;
+    border-color: var(--tableBorder);
+}
+
+.table tr th {
+    width: 101px;
+    background-color: var(--tableBg);
+    font-size: var(--textSmall);
+    padding: 2px 0;
+    height: 22px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table thead th {
+    border-right: 1px solid var(--tableBorder);
+}
+
+.table thead th:last-child {
+    border-right: none;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid var(--tableBorder);
+}
+
+.table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.table tr td {
+    text-align: center;
+    font-size: var(--textSmall);
+    height: 22px;
+    padding: 2px 4px;
+    line-height: normal;
+    vertical-align: middle;
+    border-right: 1px solid var(--tableBorder);
+    border-bottom: none;
+}
+
+.table tbody tr td:last-child {
+    border-right: none;
+}
+
+.pin {
+    width: 106px;
+    margin-bottom: 10px;
+}
+
+.pin:last-child {
+    margin-bottom: 0;
+}
+
+.pin .connection {
+    height: 2px;
+    width: 23px;
+    position: relative;
+}
+
+.pin .connection::before,
+.pin .connection::after {
+    content: '';
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+    left: 0;
+    background-color: red;
+    top: -3px;
+}
+
+.pin .connection::after {
+    left: 100%;
+    right: -8px;
+}
+
+.pin .connection.blue,
+.pin .connection.blue::before,
+.pin .connection.blue::after {
+    background-color: var(--pinBlue);
+}
+
+.pin .connection.red,
+.pin .connection.red::before,
+.pin .connection.red::after {
+    background-color: var(--pinRed);
+}
+
+.pin .pin-label {
+    margin-left: 16px;
+    font-family: var(--fontRoboto);
+}
+
+.area-chart {
+    width: 200px;
+    margin-left: 20px;
+}
+
+.page-3 .area-chart {
+    width: 240px;
+    margin-left: 0;
+    padding: 0;
+}
+
+/* PAGE 4 */
+.page-4 #chartPlaceholder,
+.page-5 #chartPlaceholder {
+    width: 180px;
+    position: relative;
+}
+
+.page-4 #innerText,
+.page-5 #innerText {
+    font-size: var(--doughnutInnerText);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: none;
+}
+
+.page-4 .legend,
+.page-5 .legend {
+    display: block;
+    width: 100%;
+}
+
+.page-4 .legend ul,
+.page-5 .legend ul {
+    margin: 0 0 0 30px;
+    list-style: none;
+}
+
+.page-4 .legend li,
+.page-5 .legend li {
+    margin-bottom: 0;
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+}
+
+.page-4 .legend li:last-child,
+.page-5 .legend li:last-child {
+    margin-bottom: 0;
+}
+
+.page-4 .legend .bullet,
+.page-5 .legend .bullet {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin-right: 7px;
+}
+
+.page-4 .legend a {
+    color: var(--legendLink);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.page-4 .legend a:hover {
+    text-decoration: underline;
+}
+
+.page-4 .accounts>div,
+.page-5 .accounts>div {
+    width: 362px;
+}
+
+.page-4 .account,
+.page-5 .account {
+    width: 100%;
+    height: 43px;
+    padding: 0 16px;
+    margin-bottom: 5px;
+}
+
+.page-4 .account:last-child,
+.page-5 .account:last-child {
+    margin-bottom: 0;
+}
+
+.page-4 .account div:nth-of-type(1),
+.page-5 .account div:nth-of-type(1) {
+    width: 121px;
+}
+
+.page-4 .account img,
+.page-5 .account img {
+    width: 30px;
+    height: 30px;
+}
+
+.page-3 #tips,
+.page-4 #tips,
+.page-5 #tips {
+    width: 187px;
+    border: 1px solid var(--lightGrey);
+    margin-left: 10px;
+    border-radius: var(--radius10);
+    padding: 10px;
+}
+
+.page-3 #tips {
+    width: 170px;
+    height: max-content;
+    flex: none;
+}
+
+.page-5 #tips {
+    height: max-content;
+}
+
+.page-3 #tips h3,
+.page-4 #tips h3,
+.page-5 #tips h3 {
+    font-size: var(--secondaryHeading);
+}
+
+.page-4 .account .name,
+.page-5 .account .name {
+    margin-bottom: 2px;
+}
+
+.page-4 .currency,
+.page-5 .currency {
+    font-family: var(--secondaryFont);
+    position: relative;
+}
+
+.page-4 .currency:last-child,
+.page-5 .currency:last-child {
+    margin-left: 25px;
+    position: relative;
+}
+
+.page-4 .currency:first-child::after,
+.page-5 .currency:first-child::after {
+    content: '';
+    height: 12px;
+    background-color: var(--blue);
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    width: 1px;
+    right: -14px;
 }
