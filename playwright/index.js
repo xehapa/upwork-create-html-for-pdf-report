@@ -1,6 +1,7 @@
 const { chromium } = require('playwright')
 
 const baseUrl = 'http://localhost:5500/complete'
+var basePath = process.env.BASE_PATH
 
 ;(async () => {
   const browser = await chromium.launch()
@@ -16,12 +17,12 @@ const baseUrl = 'http://localhost:5500/complete'
     ]
     
     let i = 0
-    
+  
     for (const path of paths) {
       ++i
       await page.goto(`${baseUrl}/${path}`);
       await page.waitForTimeout(300)
-      await page.pdf({path: `../output/page-${i}.pdf`, printBackground: true})
+      await page.pdf({path: `${basePath}/output/page-${i}.pdf`, printBackground: true})
       console.log(`Generate PDF number ${i}`)
     }
     
