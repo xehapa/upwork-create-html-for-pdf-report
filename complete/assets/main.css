@@ -255,6 +255,15 @@ p {
     position: relative
 }
 
+.infographic #people-illustration {
+    width: 93px;
+    position: absolute;
+    left: 17.14%;
+    right: 67.27%;
+    top: 26.25%;
+    bottom: 57.71%;
+}
+
 #verticalLine {
     width: 2px;
     height: 286px;
